@@ -1,9 +1,46 @@
-!!! note
-    The Unity docs are still a work-in-progress. Some docs may be missing, or incomplete. If you would like to contribute to these docs, please submit PRs to the upstream repository [here](https://github.com/UMass-RC/unity-docs).
-
 # Introduction to Unity #
-This introductory tutorial will help you build an understanding of what an HPC Cluster, or **High Performance Computing Cluster** is, and how to most effectively utilize it.
+Welcome to Unity!
+The Unity cluster is a collaborative, multi-institutional high-performance computing cluster located at the Massachusetts Green High Performance Computing Center [(MGHPCC)](www.mghpcc.org). The cluster is under active development and supports primarily research activities. Partnering institutions today include UMass Amherst, UMass Dartmouth, and University of Rhode Island.
 
+#### 1. Accessing Unity ####
+
+**For Faculty/PI:** If you are a Principal Investigator (PI), please request PI status by clicking the "Request PI" button on the left menu on the Unity [main page](https://unity.rc.umass.edu).
+
+**For Students:** Sign up for an account by clicking on “Login/Request Account” on the left menu on the Unity [main page](https://unity.rc.umass.edu):
+Select “University of Massachusetts Amherst” from the drop-down menu.
+Use your normal campus NetID and password to sign up for a Unity account.
+Click the "My PIs" button.  Click the "+" button in the center and search for the PI by name. Input format as: “pi_username_umass_edu”.
+Once found, click on “Send Request”. After your PI approves your request, you will have access to Unity and your PI’s project data.
+
+
+
+#### 2. Connecting to the cluster ####
+You can connect to Unity in two ways, an SSH connection (the standard linux console), or an instance of JupyterLab:
+
+[JupyterLab](connecting/jupyter.md) is the easiest to get up and going. To work with JupyterLab, it's a good idea to get aquainted with roughly how demanding the job you're uploading is though. You just need to be familiar with how roughly how many of each resource you will need (Image below). Most of the time you will only ever need a single CPU or GPU, but if you have terabytes of data to analyze, then you should probably consider getting multiple GPUs and CPUs. 
+
+When connecting the portal, click on JupyterLab tab located at the bottom of the options list on the left side of the window. This will take you to the JupyterHub for Unity, which looks like this: 
+
+![JupyterHub](res/JupyterHub Image.png)
+
+You will be asked to select what computer resources you want/need for the job you want to upload. Once you attempt to spawn your notebook and resources become available, you will be able to use JupyterLab as if it is running on your own computer.
+
+[SSH](connecting/ssh.md) is the more traditional method of using an HPC cluster. You will connect to the login node of unity, and you will be responsible for starting your own jobs. This can be more useful than JupyterLabs for jobs that last a long time and must be left unattended, or to have much more refined control over the resources allocated for your job.
+
+#### 3. Requesting Resources ####
+If you are on an SSH connection, you will have to manually request resources. Once you decide on what resources you want, you will submit that information to the scheduler, which will place you in a queue. If your resources are available immediately, your request will return right away, if not, you will be held in the queue until your requested resources become available.
+
+Requesting resources in the cluster and all parameters allowed is discussed in more detail [here](slurm/index.md).
+
+#### 4. Starting Job ####
+Once the scheduler has started your job, it will run on some node in the cluster, using some resources that were defined by your parameters. It is not important what node the job runs on from the point of view of the client.
+
+#### 5. Ending Job ####
+Once the job has finished, the scheduler will return whatever info you requested in your parameters.
+
+
+
+#### 6. How the Unity Cluster Works ####
 ### Defining some Terms ###
 <!--At its most basic level, you are learning how to use a **cluster**. A cluster is many servers (or computers) joined together in an effort to work together, where a single server is known as a **node**. Unity is an **HPC**, or High Performance Computing cluster. This means we focus most on computational power and efficiency, as the name entails. The primary use case of Unity is by researchers wanting more computational power than what is available on their own. -->
 
@@ -40,28 +77,3 @@ Here is a general step by step process that governs how the Unity Cluster works:
     * '*Necessary*' because if the job requested requires 2 GPUs and 1 CPU then you need 2 positions in the GPU que and 1 position in the CPU que. This means that the wait time to get your required resources could be longer, but this doesn't mean the runtime of your job will also be longer.
 3. Once resources are available (cores, gpu, memory, etc.), the scheduler starts your job.
 4. Once your job completes, the result returns to the client.
-
-
-#### 1. Connecting to the cluster ####
-You can connect to Unity in two ways, an SSH connection (the standard linux console), or an instance of JupyterLab:
-
-[JupyterLab](connecting/jupyter.md) is the easiest to get up and going. To work with JupyterLab, it's a good idea to get aquainted with roughly how demanding the job you're uploading is though. You just need to be familiar with how roughly how many of each resource you will need (Image below). Most of the time you will only ever need a single CPU or GPU, but if you have terabytes of data to analyze, then you should probably consider getting multiple GPUs and CPUs. 
-
-When connecting the portal, click on JupyterLab tab located at the bottom of the options list on the left side of the window. This will take you to the JupyterHub for Unity, which looks like this: 
-
-![JupyterHub](res/JupyterHub Image.png)
-
-You will be asked to select what computer resources you want/need for the job you want to upload. Once you attempt to spawn your notebook and resources become available, you will be able to use JupyterLab as if it is running on your own computer.
-
-[SSH](connecting/ssh.md) is the more traditional method of using an HPC cluster. You will connect to the login node of unity, and you will be responsible for starting your own jobs. This can be more useful than JupyterLabs for jobs that last a long time and must be left unattended, or to have much more refined control over the resources allocated for your job.
-
-#### 2. Requesting Resources ####
-If you are on an SSH connection, you will have to manually request resources. Once you decide on what resources you want, you will submit that information to the scheduler, which will place you in a queue. If your resources are available immediately, your request will return right away, if not, you will be held in the queue until your requested resources become available.
-
-Requesting resources in the cluster and all parameters allowed is discussed in more detail [here](slurm/index.md).
-
-#### 3. Starting Job ####
-Once the scheduler has started your job, it will run on some node in the cluster, using some resources that were defined by your parameters. It is not important what node the job runs on from the point of view of the client.
-
-#### 4. Ending Job ####
-Once the job has finished, the scheduler will return whatever info you requested in your parameters.
