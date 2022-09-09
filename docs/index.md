@@ -4,13 +4,23 @@ The Unity cluster is a collaborative, multi-institutional high-performance compu
 
 #### 1. Accessing Unity ####
 
-**For Faculty/PI:** If you are a Principal Investigator (PI), please request PI status by clicking the "Request PI" button on the left menu on the Unity [main page](https://unity.rc.umass.edu).
+**For Faculty/PI:** If you are a Faculty member or Principal Investigator (PI), please create an account on the Unity [main page](https://unity.rc.umass.edu). Use your campus NetID and password to sign up for a Unity account.  Once your account is created, go to Account Settings and request PI status by clicking the "Request PI account" button.  Once your account is approved you will be able to approve adding additional users to your PI group in the “My Users” button on the side menu.  Adding users will grant them access to your PI /work directory.  Users in your group need to request access to join your PI group.  You cannot create accounts for your users.
 
-**For Students:** Sign up for an account by clicking on “Login/Request Account” on the left menu on the Unity [main page](https://unity.rc.umass.edu):
-Select “University of Massachusetts Amherst” from the drop-down menu.
-Use your normal campus NetID and password to sign up for a Unity account.
-Click the "My PIs" button.  Click the "+" button in the center and search for the PI by name. Input format as: “pi_username_umass_edu”.
-Once found, click on “Send Request”. After your PI approves your request, you will have access to Unity and your PI’s project data.
+
+**For Students:** In order to use Unity you must be working with a faculty/PI and they must grant you access to their PI group.
+
+Create an account on the Unity [main page](https://unity.rc.umass.edu).
+Use your normal campus ID and password to sign up for a Unity account. Use your campus NetID and password to sign up for a Unity account. Once your account is created you will need to assign a PI to it.  To do this, go to "My PIs" using the left side menu and click the large "+" button. You can search for your PI by name. Once found, click on “Send Request”. After your PI approves your request, you will have access to Unity and your PI’s project code and data stored in Unity.
+
+**Note:** If you are a student, **do not request a PI account**.  This will slow the process down.  You should assign a PI to your account by clicking the "+" button.  Your PI will then be able to approve your account.
+
+<span style="font-size:0.8em;">Something not working for you?  Send email to <hpc@umass.edu> with as much detail as you can provide to open a support ticket.
+Need additional help?  We offer office hours every week on Tuesdays 2-4 PM on [Zoom](https://umass-amherst.zoom.us/j/95663998309?pwd=K2F2b0ZrNmhYR3pic1loY2pvcUhkdz09). Be sure to check the [cluster notes page](https://unity.rc.umass.edu/index.php) for up-to-date information on any canceled/delayed office hours.
+
+<span style="font-size:0.8em;">Need expert help using the cluster and optimizing your code?  We encourage you to schedule an appointment with one of our experienced HPC facilitators.  Send an email to <hpc@umass.edu> and request an HPC facilitator consultation.
+
+
+
 
 
 
