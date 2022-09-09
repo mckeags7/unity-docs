@@ -22,8 +22,6 @@ Need additional help?  We offer office hours every week on Tuesdays 2-4 PM on [Z
 
 
 
-
-
 #### 2. Connecting to the cluster ####
 You can connect to Unity in two ways, an SSH connection (the standard linux console), or an instance of JupyterLab:
 
