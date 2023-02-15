@@ -31,7 +31,7 @@ When connecting the portal, click on JupyterLab tab located at the bottom of the
 
 ![JupyterHub](res/JupyterHub Image.png)
 
-You will be asked to select what computer resources you want/need for the job you want to upload. Once you attempt to spawn your notebook and resources become available, you will be able to use JupyterLab as if it is running on your own computer.
+You will be asked to select what computer resources you want/need for the job you want to upload. Once you attempt to spawn your notebook and resources become available, you will be able to use JupyterLab as if it is running on your own computer. It is important to note that most JupyterLab jobs end with TIMEOUT.
 
 [SSH](connecting/ssh.md) is the more traditional method of using an HPC cluster. You will connect to the login node of unity, and you will be responsible for starting your own jobs. This can be more useful than JupyterLabs for jobs that last a long time and must be left unattended, or to have much more refined control over the resources allocated for your job.
 
